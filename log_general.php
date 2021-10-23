@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Log in</title>
+	<title>Log in general</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -18,7 +18,7 @@
         <br><br><br>
 
         <div class="content is-large">
-        <h2>Log in</h2>
+        <h2>Log in general</h2>
         </div>
         <hr>
 
@@ -60,7 +60,7 @@
             <div class="column">
 
                         <!-- Boton de guardar -->
-                        <button type="submit" name="register" class="button is-success">
+                        <button type="submit" name="loguear" class="button is-success">
                             <span class="icon is-small">
                             <i class="fas fa-check"></i>
                             </span>
@@ -72,7 +72,7 @@
 
 
         <?php 
-        include("verificar.php");
+        include("verificar_general.php");
         ?>
         </div>
     </div>

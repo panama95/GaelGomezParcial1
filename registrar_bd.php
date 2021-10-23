@@ -13,7 +13,8 @@ if (isset($_POST['register'])) {
 
 	    $consulta = "INSERT INTO usuarios(nombre, apellido, email, password, foto, nivel) VALUES ('$nombre','$apellido','$email','$password','$foto','$nivel')";
 	    $resultado = mysqli_query($conex,$consulta);
-	    if ($resultado) {
+	    
+		if ($resultado) {
 	    	?> 
 	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
            <?php
