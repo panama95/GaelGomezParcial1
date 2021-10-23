@@ -11,16 +11,14 @@
 
 </head>
 <body>
-
-<form method="post">
-
     <div class="columns is-mobile">
         <div class="column is-3 is-offset-one-third">
 
+        <form method="post">
         <br><br><br>
 
         <div class="content is-large">
-        <h2>Log in general</h2>
+        <h2>Log in admin</h2>
         </div>
         <hr>
 
@@ -28,7 +26,7 @@
         <!--Email-->
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" name="email" type="text" placeholder="Correo">
+                <input class="input" type="text" name="email"  placeholder="Correo">
                 <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
                 </span>
@@ -38,7 +36,7 @@
         <!--Contrasena-->
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" name="pass" type="password" placeholder="Password">
+                <input class="input" type="password" name="pass" Placeholder="Password">
                 <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
                 </span>
@@ -62,7 +60,7 @@
 
 
         <?php 
-        include("verificar_general.php");
+        include("verificar_admin.php");
         ?>
         </div>
     </div>

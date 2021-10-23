@@ -1,32 +1,26 @@
 <?php
-
-$nivel=2;
-
 include('conexion.php');
-$email=$_POST['email'];
-$password=$_POST['password'];
-session_start();
-$_SESSION['email']=$email;
 
+if (isset($_POST['loguear'])) {
+      if (strlen($_POST['email']) >= 1) {
 
-$conexion=mysqli_connect("localhost","estudiante","utp2021","bd_parcial1"); 
+        $email = trim($_POST['email']);
+        $pass= trim($_POST['pass']);
 
-$consulta="SELECT*FROM usuarios where email='$email' and password='$password' and nivel='$nivel'" ;
-$resultado=mysqli_query($conexion,$consulta);
+    $consulta="SELECT * FROM usuarios WHERE usuarios.email='$email'";
+    $resultado=mysqli_query($conex,$consulta);
 
-$filas=mysqli_num_rows($resultado);
+    $filas=mysqli_num_rows($resultado);
 
-if($filas){
+    if($filas){
+      
+        header("location:panel_usuario.php");
 
-        header("location:panel_usuario.php");    
+    }else{
+        ?>
+      <h3>esta vacio</h3>
+      <?php
+    }
 
-}else{
-    ?>
-    <?php
-    include("log_general.php");
-
-  ?>
-  <?php
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+?>

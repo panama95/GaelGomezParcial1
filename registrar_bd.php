@@ -7,11 +7,11 @@ if (isset($_POST['register'])) {
 	    $nombre = trim($_POST['nombre']);
 		$apellido = trim($_POST['apellido']);
 	    $email = trim($_POST['email']);
-		$password = trim($_POST['password']);
+		$pass= trim($_POST['pass']);
 		$foto = trim($_POST['foto']);
 		$nivel = 2;
 
-	    $consulta = "INSERT INTO usuarios(nombre, apellido, email, password, foto, nivel) VALUES ('$nombre','$apellido','$email','$password','$foto','$nivel')";
+	    $consulta = "INSERT INTO usuarios(nombre, apellido, email, pass, foto, nivel) VALUES ('$nombre','$apellido','$email','$pass','$foto','$nivel')";
 	    $resultado = mysqli_query($conex,$consulta);
 	    
 		if ($resultado) {
