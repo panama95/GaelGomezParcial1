@@ -47,7 +47,7 @@
           <a class="navbar-item content is-medium" href="mod_cuenta.php">
             Modificar cuenta
           </a>
-          <a class="navbar-item content is-medium" href="login.php">
+          <a class="navbar-item content is-medium" href="index.php">
             Cerrar sesion
           </a>
         </div>
