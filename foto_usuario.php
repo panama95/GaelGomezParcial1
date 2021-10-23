@@ -56,6 +56,71 @@
 </nav>
 
 <!--Navbar End-->
+<!--Contenido -->
+<br><br><br><br>
+
+      <div class="columns">
+        <div class="column">
+
+          <div id="file-js-example" class="file is-warning  has-name is-centered is-boxed">
+            <label class="file-label">
+              <input class="file-input" type="file" name="resume">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Escoger archivo…
+                </span>
+              </span>
+              <span class="file-name">
+                No ha seleccionado
+              </span>
+            </label>
+          </div>
+
+
+
+        <script>
+          const fileInput = document.querySelector('#file-js-example input[type=file]');
+          fileInput.onchange = () => {
+            if (fileInput.files.length > 0) {
+              const fileName = document.querySelector('#file-js-example .file-name');
+              fileName.textContent = fileInput.files[0].name;
+            }
+          }
+        </script>
+
+        </div>
+      </div>
+      
+      <br><br><br><br><br>
+      <div class="columns">
+      <div class="column is-offset-one-quarter">
+                        <!-- Boton de cancelar -->
+                        <a href="index.php">
+                        <button type="button" class="button is-danger is-medium">
+                            <span class="icon is-small">
+                            <i class="fas fa-times"></i>
+                            </span>
+                            <span>Cancelar</span>
+                        </button>        
+                        </a>
+            </div>
+          <div class="column">
+            <!-- Boton de guardar -->
+              <button type="submit" name="register" class="button is-success is-medium">
+                <span class="icon is-small">
+                <i class="fas fa-check"></i>
+                </span>
+                <span>Guardar</span>
+              </button>
+            </div>
+              <!--CAMBIAR HACIA EL QUE MODIFIQUE LA FOTO -->
+            <?php 
+            include("registrar_bd.php"); 
+            ?>
+      </div>   
 
 
 </body>
