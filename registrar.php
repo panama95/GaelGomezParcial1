@@ -95,7 +95,7 @@
         <div class="columns">
             <div class="column is-8">
                         <!-- Boton de cancelar -->
-                        <a href="login.php">
+                        <a href="index.php">
                         <button type="button" class="button is-danger">
                             <span class="icon is-small">
                             <i class="fas fa-times"></i>
