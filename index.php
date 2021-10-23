@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registrar usuario</title>
+	<title>Log in</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -51,9 +51,9 @@
                         <a href="registrar.php">
                         <button type="button" class="button is-info">
                             <span class="icon is-small">
-                            <i class="fas fa-user-plus"></i>
+                            <i class="fas fa-times"></i>
                             </span>
-                            <span>Registrarse</span>
+                            <span>Registrar</span>
                         </button>        
                         </a>
             </div>
@@ -62,9 +62,9 @@
                         <!-- Boton de guardar -->
                         <button type="submit" name="register" class="button is-success">
                             <span class="icon is-small">
-                            <i class="fas fa-user-check"></i>
+                            <i class="fas fa-check"></i>
                             </span>
-                            <span>Ingresar</span>
+                            <span>Log in</span>
                         </button>
             </div>
         </div>
@@ -72,7 +72,7 @@
 
 
         <?php 
-        include("registrar_bd.php");
+        include("verificar.php");
         ?>
         </div>
     </div>
