@@ -1,28 +1,28 @@
 <?php
 include('conexion.php');
-$email=$_POST['email'];
-$pass=$_POST['pass'];
-session_start();
-$_SESSION['email']=$email;
 
-$conexion=mysqli_connect("localhost","estudiante","utp2021","bd_parcial1"); 
+if (isset($_POST['loguear'])) {
+      if (strlen($_POST['email']) >= 1) {
 
-$consulta="SELECT*FROM usuarios WHERE email='$email' and pass='$pass'";
-$resultado=mysqli_query($conexion,$consulta);
+        $email = $_POST['email'];
+        $pass= $_POST['pass'];
 
-$filas=mysqli_num_rows($resultado);
+    $consulta= "SELECT * FROM usuarios WHERE email='$email' AND pass='$pass' AND nivel='1' ";
+    $resultado=mysqli_query($conex,$consulta);
 
-if($filas){
-  
-    header("location:panel_admin.php");
+    $filas=mysqli_num_rows($resultado);
 
-}else{
-    ?>
-    <?php
-    include("log_admin.html");
+    if($filas){
+      
+        header("location:panel_admin.php");
 
-  ?>
-  <?php
+    }else{  
+      ?>
+        
+      <?php
+    }
+
+  }
+
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+?>

@@ -14,8 +14,8 @@
 
 <form method="post">
 
-    <div class="columns is-mobile">
-        <div class="column is-3 is-offset-one-third">
+<div class="columns is-mobile">
+    <div class="column is-3 is-offset-one-third">
 
         <br><br><br>
 
@@ -28,7 +28,7 @@
         <!--Email-->
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" name="email" type="text" placeholder="Correo">
+                <input class="input" name="email" type="text" placeholder="Correo" required>
                 <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
                 </span>
@@ -38,7 +38,7 @@
         <!--Contrasena-->
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" name="pass" type="password" placeholder="Password">
+                <input class="input" name="pass" type="password" placeholder="Password" required>
                 <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
                 </span>
@@ -57,14 +57,27 @@
                             <span>Log in</span>
                         </button>
             </div>
-        </div>
+
 
 
 
         <?php 
         include("verificar_general.php");
         ?>
+            <div class="column is-8">
+                                <!-- Boton de cancelar -->
+                                <a href="/GAELGOMEZPARCIAL1/index.php">
+                        <button type="button" class="button is-danger">
+                            <span class="icon is-small">
+                            <i class="fa fa-user fa-fw"></i>
+                            </span>
+                            <span>Volver</span>
+                        </button>        
+                        </a>
+            </div>
+
         </div>
     </div>
+</div>
 </body>
 </html>

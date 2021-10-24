@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="/GAELGOMEZPARCIAL1/estilo.css">
 	<title>Panel de control de usuario general</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
