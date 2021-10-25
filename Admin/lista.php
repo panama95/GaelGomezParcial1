@@ -67,19 +67,22 @@ $conex = mysqli_connect("localhost","estudiante","utp2021","bd_parcial1");
 <!--Navbar End-->
 <!--Contenido -->
 <br>
-<div class="columns">
+<div class="columns ">
     <div class="column is-offset-one-quarter">
-	<table class="table"  >
+    <h3>LISTA DE ADMINISTRADORES</h3><br><br>
+	<table class="table is-hoverable" >
 		<tr>
-			<td>id</td>
-			<td>nombre</td>
-			<td>apellido</td>
-			<td>email</td>
-			<td>foto</td>	
+    <td><strong>Id</strong></td>
+			<td><strong>Nombre</strong></td>
+			<td><strong>Apellido</strong></td>
+			<td><strong>Email</strong></td>
+			<td><strong>Foto</strong></td>	
+      <td><strong>Nivel</strong></td>   
+      <td><strong>Cambiar nivel a admin</strong></td>
 		</tr>
 
 		<?php 
-		$sql="SELECT * from usuarios";
+		$sql="SELECT * from usuarios WHERE nivel=1";
 		$result=mysqli_query($conex,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
@@ -91,12 +94,65 @@ $conex = mysqli_connect("localhost","estudiante","utp2021","bd_parcial1");
 			<td><?php echo $mostrar['apellido'] ?></td>
 			<td><?php echo $mostrar['email'] ?></td>
 			<td><?php echo $mostrar['foto'] ?></td>
-		</tr>
+      <td><?php echo $mostrar['nivel'] ?></td>
+      <td><a href="mod_nivel_user.php"><button name="nivel" class="button is-info">
+                            <span>Cambiar</span>
+                        </button></a>
+      </td>
+    </tr>
+    
 	<?php 
+    
 	}
 	 ?>
 	</table>
     </div>
 </div>
+
+
+<div class="columns">
+    <div class="column is-offset-one-quarter">
+
+<h3>LISTA DE USUARIOS GENERAL</h3><br><br>
+    <table class="table is-hoverable" >
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Nombre</strong></td>
+			<td><strong>Apellido</strong></td>
+			<td><strong>Email</strong></td>
+			<td><strong>Foto</strong></td>	
+      <td><strong>Nivel</strong></td>   
+      <td><strong>Cambiar nivel a admin</strong></td>
+		</tr>
+
+		<?php 
+		$sql="SELECT * from usuarios WHERE nivel=2";
+		$result=mysqli_query($conex,$sql);
+
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+
+		<tr>
+			<td><?php echo $mostrar['id'] ?></td>
+			<td><?php echo $mostrar['nombre'] ?></td>
+			<td><?php echo $mostrar['apellido'] ?></td>
+			<td><?php echo $mostrar['email'] ?></td>
+			<td><?php echo $mostrar['foto'] ?></td>
+      <td><?php echo $mostrar['nivel'] ?></td>
+      <td><a href="mod_nivel_admin.php"><button name="nivel" class="button is-info">
+                            <span>Cambiar</span>
+                        </button></a>
+      </td>
+    </tr>
+    
+	<?php 
+    
+	}
+	 ?>
+	</table>
+    </div>
+</div>
+
+
 </body>
 </html>
