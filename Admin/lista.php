@@ -1,3 +1,9 @@
+<?php
+
+$conex = mysqli_connect("localhost","estudiante","utp2021","bd_parcial1"); 
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +65,38 @@
 </nav>
 
 <!--Navbar End-->
+<!--Contenido -->
+<br>
+<div class="columns">
+    <div class="column is-offset-one-quarter">
+	<table class="table"  >
+		<tr>
+			<td>id</td>
+			<td>nombre</td>
+			<td>apellido</td>
+			<td>email</td>
+			<td>foto</td>	
+		</tr>
 
+		<?php 
+		$sql="SELECT * from usuarios";
+		$result=mysqli_query($conex,$sql);
 
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+
+		<tr>
+			<td><?php echo $mostrar['id'] ?></td>
+			<td><?php echo $mostrar['nombre'] ?></td>
+			<td><?php echo $mostrar['apellido'] ?></td>
+			<td><?php echo $mostrar['email'] ?></td>
+			<td><?php echo $mostrar['foto'] ?></td>
+		</tr>
+	<?php 
+	}
+	 ?>
+	</table>
+    </div>
+</div>
 </body>
 </html>
