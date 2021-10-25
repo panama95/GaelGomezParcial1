@@ -16,18 +16,17 @@ El parcial 1 de ds7
 
          Se hizo funcional la pantalla de crear usuario, se almacena los usuarios nuevos
          Se creo el usuario mayor
-
-         correo: mzgael1234@gmail.com
-         contra: aabbcc
-         nivel : 1
+         PANTALLAS DE ADMINISTRADOR
+         LOGIN VERIFIQUE USUARIO
+         MODIFICAR IONFORMACION DE CUENTA DE USUARIO GENERAL
+         
          
 *************************************************************************************************************
          FALTA
 
-         PANTALLAS DE ADMINISTRADOR
-         LOGIN VERIFIQUE USUARIO
+
          FOTO DE PERFIL DE USUARIO GENERAL PUEDA CAMBIARSE
-         MODIFICAR IONFORMACION DE CUENTA DE USUARIO GENERAL
+
 
 *************************************************************************************************************
  
